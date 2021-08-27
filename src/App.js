@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import CommentList from './components/CommentList';
+// import Compond from './components/Compond';
+// import Hoc from './components/Hoc';
+// import Condition from './components/Condition';
+// import Demo from './components/Demo';
+import TodoList from './components/TodoList';
+import './App.css'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+      <div className="App">
+        {/* <CommentList/>
+        <Compond/>
+        <Hoc />
+        <Condition />
+        <Demo/> */}
+        <TodoList />
+      </div>
+    );
+  }
+  
+  export default App;
+  
 
-export default App;
