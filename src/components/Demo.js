@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import Counter from './Counter'
+// import Counter from './Counter';
+import TodoList from './TodoList';
 
 const Demo = () => {
     const [showCounter, setCounter] = useState(false)
@@ -16,7 +17,7 @@ const Demo = () => {
             <button onClick={handleCounter}>{showCounter?'Hide Counter':'Show Counter'}</button>
             {
                 showCounter ? 
-                ( <Counter />):null
+                ( <TodoList />):null
             }
            
         </div>
