@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.demo-container{
+/* .demo-container{
     display: flex;
     flex-direction:column;
     justify-content:space-between;
@@ -26,4 +26,14 @@ h1{
     display: flex;
     justify-content: space-evenly;
     margin-top: 10px;
+} */
+
+.Nav-Container{
+    display:flex;
+    justify-content:space-evenly;
+    width:60%;
+    margin:1rem auto; 
+}
+button{
+    padding:0.8rem 1.2rem;
 }

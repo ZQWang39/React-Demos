@@ -4,7 +4,7 @@ import React from 'react';
 // import Hoc from './components/Hoc';
 // import Condition from './components/Condition';
 import Demo from './components/Demo';
-import TodoList from './components/TodoList';
+//import TodoList from './components/TodoList';
 import './App.css'
 
 
