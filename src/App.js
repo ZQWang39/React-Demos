@@ -1,21 +1,36 @@
 import React from 'react';
+import './App.css'
 // import CommentList from './components/CommentList';
 // import Compond from './components/Compond';
 // import Hoc from './components/Hoc';
 // import Condition from './components/Condition';
-import Demo from './components/Demo';
+// import Demo from './components/Demo';
 //import TodoList from './components/TodoList';
-import './App.css'
+// import Counter from './components/Counter'
 
+import {useSelector, useDispatch} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import actionCreators from './state/index'
 
 function App() {
+  // const [currentCount, setCount] = React.useState(0)
+  const account = useSelector((state)=>state.account);
+  const dispatch = useDispatch();
+  const {depositMoney, withdrawMoney} = bindActionCreators(actionCreators, dispatch);
+  
     return (
+      
       <div className="App">
         {/* <CommentList/>
         <Compond/>
         <Hoc />
-        <Condition /> */}
-        <Demo/>
+        <Condition />
+        <Demo/> */}
+        {/* <span>Total count:</span>
+        <Counter currentCount={currentCount} setCount={setCount}/> */}
+        <h1>{account}</h1>
+        <button onClick={depositMoney(10)}>Deposit</button>
+        <button onClick={withdrawMoney(10)}>withdraw</button>
        
       </div>
     );

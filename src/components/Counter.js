@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react'
 
 
-const Counter = () => {
+const Counter = (props) => {
     const [currentCount, setCount] = useState(0)
+
+    // const {currentCount, setCount} = props;
 
 
         //componentDidMount
@@ -23,12 +25,12 @@ const Counter = () => {
     //     }
     // }, [])
 
-    useEffect(()=>{
-        console.log(`The currentCount has been updated to ${currentCount}`);
-        return ()=>{
-            console.log(`We are in the clean-up, the count is ${currentCount}`)
-        }
-    },[currentCount])
+    // useEffect(()=>{
+    //     console.log(`The currentCount has been updated to ${currentCount}`);
+    //     return ()=>{
+    //         console.log(`We are in the clean-up, the count is ${currentCount}`)
+    //     }
+    // },[currentCount])
 
 
     const handleIncrement = () => {
@@ -38,8 +40,7 @@ const Counter = () => {
          setCount(currentCount - 1)
       }
     return (
-        <div className="counter">
-                <h2>counter</h2>
+        <div className="counter">   
                 <span>current count:{currentCount}</span>
                 <div className="buttons">
                     <button className="increment" onClick={handleIncrement}>Increment</button>
