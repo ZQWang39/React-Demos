@@ -10,13 +10,21 @@ import './App.css'
 
 import {useSelector, useDispatch} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import actionCreators from './state/index'
+import {actionCreators} from './state/index'
 
 function App() {
   // const [currentCount, setCount] = React.useState(0)
   const account = useSelector((state)=>state.account);
   const dispatch = useDispatch();
+  const ac = bindActionCreators(actionCreators, dispatch);
+
+  console.log(ac)
   const {depositMoney, withdrawMoney} = bindActionCreators(actionCreators, dispatch);
+
+  //console.log(depositMoney(10));
+  console.log(() => depositMoney(10))
+
+
   
     return (
       
@@ -29,8 +37,8 @@ function App() {
         {/* <span>Total count:</span>
         <Counter currentCount={currentCount} setCount={setCount}/> */}
         <h1>{account}</h1>
-        <button onClick={depositMoney(10)}>Deposit</button>
-        <button onClick={withdrawMoney(10)}>withdraw</button>
+        <button onClick={() => depositMoney(10)}>Deposit</button>
+        <button onClick={() => withdrawMoney(10)}>withdraw</button>
        
       </div>
     );
