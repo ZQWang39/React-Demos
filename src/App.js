@@ -14,7 +14,7 @@ import {actionCreators} from './state/index'
 
 function App() {
   // const [currentCount, setCount] = React.useState(0)
-  const account = useSelector((state)=>state.account);
+  const account = useSelector((state)=>state.account.balance);
   const dispatch = useDispatch();
   const ac = bindActionCreators(actionCreators, dispatch);
 
@@ -22,7 +22,7 @@ function App() {
   const {depositMoney, withdrawMoney} = bindActionCreators(actionCreators, dispatch);
 
   //console.log(depositMoney(10));
-  console.log(() => depositMoney(10))
+  // console.log(() => depositMoney(10))
 
 
   
